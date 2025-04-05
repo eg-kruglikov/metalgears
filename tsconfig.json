@@ -1,16 +1,18 @@
 {
   // Задает параметры для компилятора TypeScript
   "compilerOptions": {
+    "skipLibCheck": true,
+    "types": ["node"],
     // Указывает папку, куда компилятор будет помещать скомпилированные файлы
     "outDir": "./dist/",
     // Подсвечивает все места где не указан тип
     "noImplicitAny": true,
     // Определяет формат модулей для экспорта/импорта
-    "module": "ESNext",
+    "module": "Node16",
     //чтобы TypeScript знал о TextEncoder и TextDecoder: включаем "dom" в "lib"
     "lib": ["esnext", "dom"],
     // Указывает, до какой версии JavaScript компилировать TypeScript
-    "target": "es5",
+    "target": "ES2015",
     // Указывает способ обработки JSX
     "jsx": "react-jsx", // не требует импорта React в файле.
     "jsxImportSource": "react", // явно указываем jsxImportSource для React 19:
@@ -19,7 +21,7 @@
     // Указываем строгий режим для проекта
     "strict": true,
     // Указывает стратегию поиска модулей
-    "moduleResolution": "node", //поиск модулей будет аналогичен работе Node.js.
+    "moduleResolution": "Node16", //поиск модулей будет аналогичен работе Node.js.
     // Базовая директория для абсолютных путей
     "baseUrl": ".", // корень проекта будет базовой директорией
     // Настраивает пути для абсолютных импортов

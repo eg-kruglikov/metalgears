@@ -1,6 +1,3 @@
-import Body from "./components/body/Body";
-import Headers from "./components/headers/Headers";
-
 import "./App.css";
 
 function App() {
