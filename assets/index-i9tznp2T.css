@@ -1,1 +1,0 @@
-body{margin:0;padding:0;width:100vw;background-color:bisque;height:calc(var(--vh, 1vh) * 100)}.scroll-container{scroll-snap-type:y mandatory;overflow-y:scroll;height:100vh}.section{scroll-snap-align:start;height:100vh;display:flex;justify-content:center;align-items:center;font-size:2rem}.first{background-color:#2f3e87;color:#fff}.second{background-color:#fff;color:#000}
