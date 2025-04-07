@@ -3,6 +3,8 @@ body {
   padding: 0;
   width: 100vw;
   background-color: bisque;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #root {
@@ -11,12 +13,16 @@ body {
 .scroll-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overscroll-behavior: none;
+  scroll-behavior: auto; /* отключаем smooth */
+  -webkit-overflow-scrolling: auto; /* для Safari и iOS */
 }
 
 .section {
   scroll-snap-align: start;
-  height: 100vh;
+  scroll-snap-stop: always;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;

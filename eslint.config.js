@@ -1,9 +1,10 @@
 import js from "@eslint/js";
-import globals from "globals";
+import eslintPluginImport from "eslint-plugin-import";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import globals from "globals";
 import tseslint from "typescript-eslint";
-import eslintPluginImport from "eslint-plugin-import";
 
 export default tseslint.config(
   { ignores: ["dist"] },
@@ -19,6 +20,7 @@ export default tseslint.config(
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       import: eslintPluginImport,
+      "simple-import-sort": simpleImportSort,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -39,6 +41,8 @@ export default tseslint.config(
           tsx: "always",
         },
       ],
+      "simple-import-sort/imports": "warn",
+      "simple-import-sort/exports": "warn",
     },
 
     settings: {
