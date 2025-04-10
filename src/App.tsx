@@ -1,15 +1,13 @@
 import "./App.css";
+import logo_metalgears from "./assets/logo_metalgears.png";
 
 import { useEffect, useState } from "react";
 
 function App() {
-  const [test, setTest] = useState(0);
-
   useEffect(() => {
     const setHeight = () => {
       const vh = window.innerHeight * 0.01;
       if (vh > 0) {
-        setTest(vh);
         document.documentElement.style.setProperty("--vh", `${vh}px`);
       }
     };
@@ -26,13 +24,30 @@ function App() {
       window.removeEventListener("resize", setHeight);
     };
   }, []);
+
   return (
-    <div className="scroll-container">
-      <div className="section first">
-        <h1>{test}</h1>
-      </div>
-      <div className="section second">
-        <h1>{test}</h1>
+    <div className="main-container">
+      <div className="child-container">
+        <div className="header-container">
+          {/* <p className="header-text">MEATAL GEARS</p> */}
+        </div>
+        <div className="body-container">
+          {/* <p className="header-text">MEATAL GEARS</p> */}
+
+          {/* <div className="body-info">
+            <div className="body-info-text-heading">КОНТРАКТНЫЕ ЗАПЧАСТИ</div>
+            <div className="body-info-text-content">
+              {" "}
+              Мы занимаеся продажей дигателей, кпп и кузовных элементов для
+              автопобилей. В наличии и под заказ на такие мароки: volkwaagen,
+              ВАЗ, lexus, audi
+            </div>
+          </div>
+          <div className="body-photo"></div> */}
+        </div>
+        <div className="footer-container">
+          {/* <img className="logo" src={logo_metalgears}></img> */}
+        </div>
       </div>
     </div>
   );
